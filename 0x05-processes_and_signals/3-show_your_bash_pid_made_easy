@@ -2,7 +2,5 @@
 # A Bash script that displays the PID, along with the process name, of
 # processes whose name contain the word `bash`
 
-# 1st
-echo "$PPID bash"
-# 2nd
-echo "$BASHPID bash"
+echo "$PPID bash"       # 1st
+echo "$$ bash"          # 2nd
