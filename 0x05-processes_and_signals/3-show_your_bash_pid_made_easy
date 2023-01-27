@@ -5,4 +5,4 @@
 # 1st
 echo "$PPID bash"
 # 2nd
-echo "$$ bash"
+echo "$BASHPID bash"
