@@ -3,7 +3,7 @@
 # shellcheck disable=SC2009
 
 BASH_IDs="$(pidof bash)"
-ps -uh "$BASH_IDs"
+ps -uhf "$BASH_IDs"
 
 # This script displays lines containing the bash word, thus allowing
 # you to easily get the PID of your Bash process.
