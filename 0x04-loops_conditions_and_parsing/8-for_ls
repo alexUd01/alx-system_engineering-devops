@@ -12,5 +12,5 @@ LIST="$(ls)"
 
 for item in $LIST;
 do
-    echo $item | cut -d '-' -f 2
+    echo "$item" | cut -d '-' -f 2
 done
