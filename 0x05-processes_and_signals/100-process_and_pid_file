@@ -11,7 +11,7 @@ echo "$$" >> /var/run/myscript.pid
 
 trap "echo I hate the kill command; exit 1" TERM;
 trap "echo Y U no love me?!" INT;
-trap "sudo rm /var/run/myscript.pid; exit 1" QUIT;
+trap "rm /var/run/myscript.pid; exit 1" QUIT;
 
 while true;
 do
