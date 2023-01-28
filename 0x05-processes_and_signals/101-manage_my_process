@@ -5,10 +5,10 @@ if [ $# -gt 0 ]
 then
     if [ "$1" == "start" ]
     then
-	./manage_my_process &
-	touch /var/run/my_process.pid
+	sudo ./manage_my_process &
+	sudo touch /var/run/my_process.pid
 #	echo $(pgrep -f manage_my_process) > /var/run/my_process.pid
-	echo "$!" > /var/run/my_process.pid
+	sudo echo "$!" > /var/run/my_process.pid
 	echo "manage_my_process started"
     elif [ "$1" == "stop" ]
     then
@@ -20,11 +20,11 @@ then
     then
 #	kill $(pgrep -f manage_my_process)
 	kill "$(cat /var/run/my_process.pid)"
-	rm -f /var/run/my_process.pid
-	./manage_my_process &
-	touch /var/run/my_process.pid
+	sudo rm -f /var/run/my_process.pid
+	sudo ./manage_my_process &
+	sudo touch /var/run/my_process.pid
 #	echo $(pgrep -f manage_my_process) > /var/run/my_process.pid
-	echo "$!" > /var/run/my_process.pid
+	sudo echo "$!" > /var/run/my_process.pid
 	echo "manage_my_process restarted"
     else
 	echo "Usage: manage_my_process {start|stop|restart}"
