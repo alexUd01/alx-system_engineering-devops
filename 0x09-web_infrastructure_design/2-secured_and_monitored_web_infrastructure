@@ -1,7 +1,7 @@
 https://github.com/alexUd01/alx-system_engineering-devops/blob/master/0x09-web_infrastructure_design/2-secured_and_monitored_web_infrastructure.jpg
 
 
-# Features from previous illustration
+# Features from previous illustration (Please Check below for new features)
 - A Server
 A server is a computer that provides services for other computers (clients) over a
 network.
@@ -36,6 +36,8 @@ capacity.
 4. The network protocol currently used in the overall setup is the TCP/IP suite.
 
 
+
+
 # New features
 
 - LOAD BALANCER
@@ -51,3 +53,15 @@ the replica can only accept reads.
 
 Lack of firewall on the server-side makes the server vulnerable to security risks,
 Also, the traffic between the client and server is unencrypted.
+
+
+
+# New features
+
+# Firewall
+- It filters the network traffic going into a machine and out from the machine.
+
+# HTTPS ensures that the traffic is encrypted and cannot be read/understood by a middle-man in-between the server/client connection.
+
+# Monitoring
+It is used to monitor and check if something is broken/slow.

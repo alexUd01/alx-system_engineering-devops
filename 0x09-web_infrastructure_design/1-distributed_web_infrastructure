@@ -1,7 +1,7 @@
 https://github.com/alexUd01/alx-system_engineering-devops/blob/master/0x09-web_infrastructure_design/1-distributed_web_infrastructure.jpg
 
 
-# Features from previous illustration
+# Features from previous illustration (Please Check below for new features)
 - A Server
 A server is a computer that provides services for other computers (clients) over a
 network.
@@ -34,6 +34,8 @@ code is deployed and the web server neets to be restarted.
 3. This infrastructure will not be able to handle traffic that would exceed the server
 capacity.
 4. The network protocol currently used in the overall setup is the TCP/IP suite.
+
+
 
 
 # New features
