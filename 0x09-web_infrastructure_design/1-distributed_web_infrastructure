@@ -1,8 +1,7 @@
 https://github.com/alexUd01/alx-system_engineering-devops/blob/master/0x09-web_infrastructure_design/1-distributed_web_infrastructure.jpg
 
 
-https://github.com/alexUd01/alx-system_engineering-devops/blob/master/0x09-web_infrastructure_design/0-simple_web_stack.jpg
-
+# Features from previous illustration
 - A Server
 A server is a computer that provides services for other computers (clients) over a
 network.
@@ -35,3 +34,20 @@ code is deployed and the web server neets to be restarted.
 3. This infrastructure will not be able to handle traffic that would exceed the server
 capacity.
 4. The network protocol currently used in the overall setup is the TCP/IP suite.
+
+
+# New features
+
+- LOAD BALANCER
+The load balancer is configured to have an active-passive set-up. Therefore, the load
+balancer now will distribute traffic to the failover server in case if the first
+server is down.
+A point to note with the above ilustration is that the load balancer is still a single
+point of failure (SPOF).
+
+As illustrated in the diagram provided by the link above, MySQL used replication to
+keep its data synchronized. The master database can accept read/write operations while
+the replica can only accept reads.
+
+Lack of firewall on the server-side makes the server vulnerable to security risks,
+Also, the traffic between the client and server is unencrypted.
