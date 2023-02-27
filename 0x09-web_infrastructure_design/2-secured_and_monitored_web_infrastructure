@@ -48,12 +48,10 @@ server is down.
 A point to note with the above ilustration is that the load balancer is still a single
 point of failure (SPOF).
 
+- MySQL
 As illustrated in the diagram provided by the link above, MySQL used replication to
 keep its data synchronized. The master database can accept read/write operations while
 the replica can only accept reads.
-
-Lack of firewall on the server-side makes the server vulnerable to security risks,
-Also, the traffic between the client and server is unencrypted.
 
 
 
