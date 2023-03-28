@@ -2,6 +2,7 @@
 # A bash sctipt that configures a new Ubuntu machine to respect
 # certain requrements
 
+sudo apt get update
 sudo apt install -y nginx-full
 cd /var/www/html/
 sudo touch index.html
