@@ -8,4 +8,4 @@ ufw allow 'Nginx HTTP'
 cd /var/www/html/
 chmod a+w index.html
 echo 'Hello World' > index.html
-service nginx restart
+service nginx start
