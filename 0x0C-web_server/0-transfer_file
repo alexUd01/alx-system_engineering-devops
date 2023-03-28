@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# A bash script that transferes a file from our client to a server
+# A bash script that transfers a file from our client to a server
 
 FILE="$1"
 IP="$2"
