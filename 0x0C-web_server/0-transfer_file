@@ -14,5 +14,5 @@ else
     else
 	ssh-add
     fi
-    scp "$FILE" "$USERNAME@$IP":~;
+    scp -o StrictHostKeyChecking=no "$FILE" "$USERNAME@$IP":~;
 fi
