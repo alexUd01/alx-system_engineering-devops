@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# A bash script that installs the ufw firewall and setup a few rules on a server
+# Requirements:
+# - It blocks all incoming traffic, except the following TCP ports
+#   22 (SSH), 443 (HTTPS), 80 (HTTP)
+
+# Install
+sudo apt-get update -y
+sudo apt-get install -y ufw
+
+sudo ufw allow in from any port 22
+
+# Configure
+sudo ufw deny in from any
+sudo ufw allow in from any port 22  && \
+sudo ufw allow in from any port 443 && \
+sudo ufw allow in from any port 80  && \
+sudo ufw reload                     && \
+echo "
+
+---> DONE ---
+"
