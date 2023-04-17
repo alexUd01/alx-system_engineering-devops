@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Run nginx as nginx user not root user
+
+# Stop current nginx process
+sudo service nginx stop
+
+# Modify nginx config file
+sudo sed -i s/'listen 80 default_server;'/'listen 8080 default_server;'/
+sudo sed -i s/'listen [::]:80 default_server;'/'listen [::]:8080 default_server;'/
+
+# Restart nginx (not as root)
+sudo -u "nginx" nginx service start
