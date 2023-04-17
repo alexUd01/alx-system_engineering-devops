@@ -9,11 +9,11 @@ sudo apt-get update -y
 sudo apt-get install -y ufw
 
 # Configure
-sudo ufw allow in proto tcp from any port 22  && \
-sudo ufw allow in proto tcp from any port 443 && \
-sudo ufw allow in proto tcp from any port 80  && \
-sudo ufw deny in from any                     && \
-sudo ufw enable                               && \
+sudo ufw allow 22/tcp       && \
+sudo ufw allow 443/tcp      && \
+sudo ufw allow 80/tcp       && \
+sudo ufw reject in from any && \
+sudo ufw enable             && \
 echo "
 
 ---> DONE ---
