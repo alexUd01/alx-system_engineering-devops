@@ -5,7 +5,7 @@
 sudo sed -i s/'#user www-data'/'user nginx'/ /etc/nginx/nginx.conf
 
 # Modify nginx config file: replace 80 with 8080
-sudo sed -i s/'listen 80 default_server;'/'listen 8080 default_server;'/
+sudo sed -i s/'80'/'8080'/
 
 # Grant read/write permission to the owner
 sudo chmod 644 /etc/nginx/nginx.conf
