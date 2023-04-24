@@ -40,7 +40,6 @@ if __name__ == "__main__":
                 tmp_dict['username'] = employee_username
                 all_todo_items.append(tmp_dict)
 
-
         # Write to a `.json` file
         with open("{}.json".format(argv[1]), 'w') as f:
             json.dump({argv[1]: all_todo_items}, f)
