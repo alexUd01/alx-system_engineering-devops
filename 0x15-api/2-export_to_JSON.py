@@ -31,15 +31,16 @@ if __name__ == "__main__":
         # Process Todo
         tmp_lst = r.json()
         all_todo_items = []
-        tmp_dict = {}
 
         for item in tmp_lst:
             if item.get('userId') == int(argv[1]):
+                tmp_dict = {}
                 tmp_dict['task'] = item.get('title')
                 tmp_dict['completed'] = item.get('completed')
-                tmp_dict['username'] = item.get('username')
+                tmp_dict['username'] = employee_username
                 all_todo_items.append(tmp_dict)
+
 
         # Write to a `.json` file
         with open("{}.json".format(argv[1]), 'w') as f:
-            json.dump({argv[1]: tmp_dict}, f)
+            json.dump({argv[1]: all_todo_items}, f)
