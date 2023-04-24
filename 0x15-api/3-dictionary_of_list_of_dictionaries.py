@@ -24,15 +24,24 @@ if __name__ == "__main__":
     # Fetch employee's todo list
     r_todos = get('https://jsonplaceholder.typicode.com/todos/')
     # Process Todo
-    tmp_lst = r_users.json()
-    all_todo_items = []
+    tmp_users_lst = r_users.json()
+    tmp_todos_lst = r_todos.json()
 
-    for item in range(len(tmp_lst)):
-        lst = []
-        if 
+    result = {}
+    for user in tmp_users_lst:
+        value = []
 
-    # Pretty print te result
-    print("Employee {} is done with tasks({}/{}):".format(
-        employee_name, len(done_items), len(all_todo_items)))
-    for item in done_items:
-        print('\t {}'.format(item.get('title')))
+        username = user.get('username')
+        id = user.get('id')
+
+        for todo in tmp_todos_lst:
+            if todo.get('userId') == id:
+                task = todo.get('title')
+                completed = todo.get('completed')
+                value.append({"username": username, "task": task,
+                              "completed": completed})
+        result[id] = value
+
+    # Write to a `.json` file
+    with open('todo_all_employees.json', 'w') as fhand:
+        json.dump(result, fhand)
