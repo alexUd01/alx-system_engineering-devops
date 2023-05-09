@@ -22,6 +22,7 @@ def number_of_subscribers(subreddit):
     """
     client = requests.session()
 
+    # Set custom header to avoid "too many requests error (429)"
     headers = {'user-agent': 'A custom user agent for alx advanced-API project'}
     client.headers = headers
 

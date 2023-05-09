@@ -17,6 +17,7 @@ def top_ten(subreddit):
     """
     my_client = requests.session()
 
+    # Set custom header to avoid "too many requests error (429)"
     custom_header = {'user-agent': 'Custom User Agent for task 2'}
     my_client.headers = custom_header
 
