@@ -23,7 +23,10 @@ import requests
 
 
 def recurse_help(pos, hot_list):
-    """ A helper function - This function returns the list in reverse order. """
+    """ A helper function - This function returns the list in reverse order.
+    """
+    if pos == -1:  # i.e the first list passed is empty
+        return []
     if pos == 0:
         return list([hot_list[0]['data']['title']])
     returned = recurse_help(pos - 1, hot_list)
@@ -37,7 +40,7 @@ def recurse(subreddit):
     # Set custom `User-Agent` header to avoid "too many requests error (429)"
     my_client.headers['User-Agent'] = 'Another Custom User Agent for task 3'
 
-    url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
+    url = "https://www.reddit.com/r/{:s}/hot.json".format(subreddit)
     r = my_client.get(url, allow_redirects=False)
     if r.status_code == 200:
         children = r.json()['data']['children']
