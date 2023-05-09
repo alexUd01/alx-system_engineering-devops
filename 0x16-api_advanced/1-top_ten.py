@@ -18,7 +18,7 @@ def top_ten(subreddit):
     my_client = requests.session()
 
     # Set custom `User-Agent` header to avoid "too many requests error (429)"
-    my_client.headers['User-Agent'] = 'Custom User Agent for task 2'
+    my_client.headers['User-Agent'] = 'Custom User Agent for task 1'
 
     url = "https://www.reddit.com/r/{:s}/hot.json".format(subreddit)
     r = my_client.get(url, allow_redirects=False)

@@ -23,7 +23,7 @@ def number_of_subscribers(subreddit):
     client = requests.session()
 
     # Set custom `User-Agent` header to avoid "too many requests error (429)"
-    my_client.headers['User-Agent'] = 'Custom User Agent for task 2'
+    my_client.headers['User-Agent'] = 'Custom User Agent for task 0'
 
     url = 'https://www.reddit.com/r/{:s}/about.json'.format(subreddit)
     r = client.get(url, allow_redirects=False)
