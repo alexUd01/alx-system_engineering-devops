@@ -28,7 +28,3 @@ def top_ten(subreddit):
             print(item['data']['title'])
     else:
         return None
-
-
-if __name__ == "__main__":
-    top_ten("programming")

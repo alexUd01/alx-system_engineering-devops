@@ -45,8 +45,3 @@ def recurse(subreddit):
         return result
     else:
         return None
-
-
-if __name__ == "__main__":
-    print(recurse("programming"))
-    print(len(recurse("programming")))
