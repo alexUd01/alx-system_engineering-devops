@@ -20,13 +20,13 @@ def number_of_subscribers(subreddit):
     """A function that reads from the reddit's API and returns the
     number subscribers
     """
-    client = requests.session()
+    my_client = requests.session()
 
     # Set custom `User-Agent` header to avoid "too many requests error (429)"
     my_client.headers['User-Agent'] = 'Custom User Agent for task 0'
 
     url = 'https://www.reddit.com/r/{:s}/about.json'.format(subreddit)
-    r = client.get(url, allow_redirects=False)
+    r = my_client.get(url, allow_redirects=False)
     if r.status_code == 200:
         return (r.json()["data"]["subscribers"])
     else:
