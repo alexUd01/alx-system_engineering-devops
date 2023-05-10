@@ -25,6 +25,6 @@ def top_ten(subreddit):
     if r.status_code == 200:
         list_of_hot_dicts = r.json()["data"]["children"]
         for item in list(list_of_hot_dicts):
-            print(item['data']['title'])
+            print("{:s}".format(item['data']['title']))
     else:
         print(None)
