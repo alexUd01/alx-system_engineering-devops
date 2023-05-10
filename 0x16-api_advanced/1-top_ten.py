@@ -27,4 +27,4 @@ def top_ten(subreddit):
         for item in list_of_hot_dicts:
             print(item['data']['title'])
     else:
-        return None
+        print(None)
